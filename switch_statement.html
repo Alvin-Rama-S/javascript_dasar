@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+//Switch Statetmen atau switch case
+// switch adalah  statetment percabangan yang sama dengan if, namun lebih sederhana cara pembuatannya 
+
+ const nilai = "r";
+
+ switch (nilai){
+ 	case "A":
+ 	document.writeln(`<p> Wow, selamat anda lulus sangat baik!!</p>`);
+ 	break;
+ 	case "B":
+ 	document.writeln(`<p> Wow, selamat anda lulus baik!!</p>`);
+ 	break;
+ 	case "C":
+ 	document.writeln(`<p> Wow, selamat anda lulus cukup!!</p>`);
+ 	break;
+ 	case "D":
+ 	document.writeln(`<p> Wow, selamat anda lulus kurang!!</p>`);
+ 	break;
+ 	default:
+ 	document.writeln(`<p> Maaf, anda tidak naik kelas!!</p>`);
+ 	break;
+ }
+
+document.writeln(`<br><br>`);
+document.writeln(`<b>hasil operator typeof</b>`);
+// Operator typeof
+	// operator typeof dapat digunakan untuk melihat tipe data sebuah value atau variable
+	// hasil operator typeof adalah string tipe datanya
+		/*
+		"ars" = string
+		null  = null
+		100   = number
+		{}    = object
+		[]	  = array
+		true  = boolean
+		*/
+	let data = [];
+
+	const typeData = typeof data;
+	document.writeln(`<p>${typeData}</p>`);
+
+
+document.writeln(`<br><br>`);
+
+// in operator
+// in operator adalah untuk mengecek apakah sebuah property ada didalam object atau tidak
+// jika property tersebut ada di object, maka hasilnya true, sedangkan jika tidak, maka hasilnya false
+// tidak hanya diobject, In juga digunkan untuk mengecek index di array 
+	const person = {
+		// firstName : "Alvin",
+		lastName  : "Saputra"
+	};
+
+	if ( "firstName" in person ) {
+		alert(`Hello ${person.firstName}`);
+	} else{
+		alert(`Hello  .....?`);
+	}
+
+// in operator hanya akan mengecek apakah sebuah property atau index ada atau tidak
+// jadi walaupun nilai property atau indexnya undefined atau null, maka tetap diangap ada
+
+	const student = {
+		firstName : "Eko",
+		middleName : undefined,
+		lastName  : "Saputra"
+	};
+
+	if ( "middleName" in student ) {
+		alert(`Hello ${student.middleName}`);
+	} else{
+		alert(`Hello  .....?`);
+	}
+
+	document.writeln(`<b>hasil operator undefined/null property</b>`);
+	const names = [null, "ars", null];
+	const result = 0 in names;
+
+	document.writeln(`<p>${result}</p>`);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!-- 1. langsung ke html -->
+<script type="text/javascript"> 
+	document.writeln("hello world")
+</script>
+<br>
+<!-- 2. load dari file .js -->
+<script src="helloworld.js"></script>
+<!-- 3. menampilkan html dijs -->
+<script>
+	document.writeln("<p>hello guys</p>")
+</script>
+
+<script>
+// Tipe data number
+	document.writeln(100)
+	document.writeln("<br>")
+	//Untuk koma pakai titik
+	document.writeln(99.9)
+	//binary
+	document.writeln("<br>")
+	document.writeln(0b1111010)
+	document.writeln("<br>" + "<br>")
+
+// Tipe data string
+	document.writeln("hello alvin")
+	document.writeln("<br>")
+	document.writeln("hello " + "alvin")
+	document.writeln("<br>" + "<br>")
+
+//Kode escape squence
+	document.writeln("<textarea cols='100' rows='10'>")
+	document.write("Alvin \nRama \nSaputra\n")
+	document.write("\\Home\\Alvin\n")
+	document.write("\"I am Programmer\"\n")
+	document.write("\'My School SMKN 1 Jenangan\'\n")
+	document.writeln("</textarea>")
+	document.writeln("<br>" + "<br>")
+
+// Variable
+	//variabel var tidak direcomendasikan. lebih baik let or const
+	var myName;
+	myName = "Alvin Rama Saputra";
+	document.writeln(myName);
+	document.writeln("<br>" + "<br>")
+
+	let letName;
+	letName = "Alvin Rama Saputra";
+	document.writeln(letName);
+	document.writeln("<br>" + "<br>")
+
+	// variabel const = varibel yang tidak bisa diubah
+	const constName = "Alvin Rama Saputra";
+	document.writeln(constName);
+	document.writeln("<br>" + "<br>")
+
+// Operator matematika
+	// let result = 1 + 3;
+	// document.writeln("<p> 1 + 3 = " + result + "</p>");
+	// let originalResult = result;
+
+	// result = result - 2;
+	// document.writeln("<p>" + originalResult + " - 2 = " + result + "</p>");
+	// originalResult = result;
+
+	// result = result * 5;
+	// document.writeln("<p>" + originalResult + " * 5 = " + result + "</p>");
+
+// Operator augumented assignments
+	// let result = 1 + 3;
+	// document.writeln("<p> 1 + 3 = " + result + "</p>");
+	// let originalResult = result;
+
+	// result -= 2;
+	// document.writeln("<p>" + originalResult + " - 2 = " + result + "</p>");
+	// originalResult = result;
+
+	// result *= 5;
+	// document.writeln("<p>" + originalResult + " * 5 = " + result + "</p>")
+	
+// Operator unery
+	// let result = +1;
+	// document.writeln("<p>" + result + "</p>");
+
+	// result--;
+	// document.writeln("<p>" + result + "</p>");
+
+	// result++;
+	// document.writeln("<p>" + result + "</p>");
+
+	// result = -result;
+	// document.writeln("<p>" + result + "</p>");
+	
+// Operator Perbandingan
+	let result = 5 == "5"
+	document.writeln("<p>" + result + "</p>")
+	// === artinya jika sama dengan dan tipe data harus sama
+	result = 5 === "5"
+	document.writeln("<p>" + result + "</p>")
+
+	result = 5 < 10
+	document.writeln("<p>" + result + "</p>")
+
+	result = 5 > 10
+	document.writeln("<p>" + result + "</p>")
+
+	document.writeln("<br>" + "<br>")
+
+// Operator Logika
+	const nilaiujian = 75;
+	const nilaiabsen = 75;
+
+	const lulusujian = nilaiabsen > 75;
+	const lulusabsen = nilaiabsen > 75;
+
+	const lulus = lulusujian && lulusabsen;
+	document.writeln(lulus);
+
+	// catatan
+	// Operator && akan true jika kedua variabel nya bernilai true
+	// Operator || akan true jika salah satu variabel nya bernilai true
+	// Operator ! adalah kebalikannya jika variabel true maka hasilnya bernilai false
+	document.writeln("<br>" + "<br>")
+
+// Console
+
+	console.info("hello world") //memberitahu informasi
+
+	console.warn("ini peringatan!") //memberitahu informasi peringatan 
+
+	console.error("Ini error!") //memberitahu informasi error
+
+	// console.table("hello array") //memberitahu informasi dalam bentuk table
+
+// String Template
+	// Menggunakan backtick = ``
+	const name1 = "alvin r.s";
+	const provesi = "programmer";
+	const template = `Nama : ${name1} I am ${provesi}`;
+
+	console.info(template);
+
+	const name2 = "alvin r.s";
+	const nilai = 75;
+	const template2 = `Nama : ${name2}, Lulus : ${nilai < 77}`;
+
+	console.info(template2);
+
+	// multiline string
+
+	let multiline = `
+Hello guys,
+My name Alvin'
+I am programmer,
+heheheh.`
+
+	document.writeln("<pre>")
+	document.writeln(multiline)
+	document.writeln("</pre>")
+
+// Konversi string dan number
+	const value1 = parseInt("1")
+	const value2 = 1
+	const sum = value1 + value2
+
+	document.writeln(`<p>${sum}</p>`)
+
+	document.writeln(`<p>${parseInt("1.1")}</p>`)//Mengkonversi dari string ke number(bilangan bulat)
+	document.writeln(`<p>${parseFloat("1.1")}</p>`)//Mengkonversi dari string ke number(bilangan pecahan)
+	document.writeln(`<p>${Number("1.1")}</p>`)//Mengkonversi dari string ke number(bilangan bulat atau pecahan)
+
+	const a = 1;
+	const b = 1;
+
+	const total = a.toString() + b.toString();//Mengkonversi dari number ke string
+	document.writeln(`<p>${total}</p>`);
+
+	document.writeln("<br>" + "<br>")
+	// ()	
+	//NaN (Not a Number) = menyebutkan bahwa ini bukanlah number
+	document.writeln(`<p>${parseInt("d1hello")}</p>`);
+	document.writeln(`<p>${parseFloat("1.1hello")}</p>`);
+
+	document.writeln(`<p>${Number("1")}</p>`);
+	document.writeln(`<p>${Number("1.1hello")}</p>`);
+	document.writeln(`<p>${Number("hello")}</p>`);
+
+	document.writeln("<br>")
+	//Oprasi pada NaN
+	const first = Number("kata");
+	const totalNumber = first + 100;
+
+	document.writeln(`<p>${totalNumber}</p>`);
+	document.writeln("<br>")
+
+	// isNaN () function = mengecel apakah sebuah number itu NaN atau bukan
+	document.writeln(`<p>${isNaN(first)}</p>`);
+	document.writeln(`<p>${isNaN(100)}</p>`);
+
+// Tipe data array
+	let arraykosong = []; 
+	let array = ["alvin","rama"]; 
+
+	const name = [];
+	name.push("Alvin","Rama","Saputra");//menambah data ke array
+	name.push("the","ars");
+
+	console.table(name);
+
+	console.info(name[0]);//mendapat data diposisi index
+	console.info(name[3]);
+	console.info(name[4]);
+
+	name[4] = "programmer";//mengubah data diposisi index
+	console.table(name);
+
+	delete name[3]; //menghapus data diposisi index, tetapi index tidak bergeser
+	console.table(name);
+	
+	name[3] = "diubah lagi";
+	name.push(1,2,3,4)
+	name.push(["array","ditambah","array"])//bisa memasukan array kedalam array
+	console.table(name);
+
+
+
+</script>
+</body>
+</html>
